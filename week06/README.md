@@ -58,3 +58,9 @@ ghcr.io/cebqwer/guestbook
   => [6/6] RUN useradd -m appuser 
   </code>
 </pre>
+
+## 설정을 넣는 세 가지 방법
+1. 코드 수정(guestbook의 경우 app.py)
+2. Dockerfile의 ENV
+3. docker run -e (환경변수 넘겨주기)
+4. 우선순위 : 코드 수정 < ENV < docker run -e
