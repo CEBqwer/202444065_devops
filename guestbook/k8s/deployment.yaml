@@ -15,5 +15,10 @@ spec:
       containers:
         - name: web
           image: ghcr.io/cebqwer/guestbook:v1
+          envFrom:
+            - configMapRef:
+                name: guestbook-config
+            - secretRef:
+                name: guestbook-secret
           ports:
             - containerPort: 5000
